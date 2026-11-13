@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Seu Nome | Links e serviços</title>
+<title>AetherMatterLab| Links e serviços</title>
 <meta name="description" content="Cursos, impressão 3D e branding. Fale comigo pelo WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,3 +33,155 @@
     background:var(--ink); color:var(--bg); display:grid; place-items:center;
     font-weight:800; font-size:34px; letter-spacing:-1px;
     box-shadow:6px 6px 0 var(--filament);
+  }
+  h1{font-size:28px; line-height:1.1; margin:0 0 6px; font-weight:800; letter-spacing:-.5px}
+  .tag{margin:0; color:var(--muted); font-size:16px}
+
+  .stack{display:grid; gap:12px}
+  .btn{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding:16px 18px; border-radius:14px; text-decoration:none; font-weight:600; font-size:17px;
+    background:var(--card); border:1.5px solid var(--line); cursor:pointer; font-family:inherit; color:inherit; width:100%; text-align:left;
+  }
+  .btn:hover{border-color:var(--ink)}
+  .btn small{display:block; font-weight:400; color:var(--muted); font-size:14px}
+  .btn.primary{background:var(--accent); color:var(--accent-ink); border-color:var(--accent)}
+  .btn.primary small{color:inherit; opacity:.85}
+  .btn.primary:hover{filter:brightness(1.08)}
+
+  .view{display:none}
+  .view.active{display:block}
+
+  .back{display:inline-block; margin-bottom:18px; color:var(--muted); font-size:15px; text-decoration:none}
+  .back:hover{color:var(--ink)}
+  h2{font-size:24px; margin:0 0 6px; font-weight:800; letter-spacing:-.3px}
+  .lead{color:var(--muted); margin:0 0 22px}
+
+  .service{
+    background:var(--card); border:1.5px solid var(--line); border-radius:14px;
+    padding:20px; margin-bottom:14px;
+  }
+  .service h3{margin:0 0 6px; font-size:20px; font-weight:800}
+  .service p{margin:0 0 12px}
+  .service ul{margin:0 0 16px; padding-left:20px; color:var(--muted)}
+  .service li{margin-bottom:2px}
+  .service .btn{justify-content:center; text-align:center}
+
+  footer{margin-top:32px; text-align:center; color:var(--muted); font-size:13px}
+  @media (prefers-reduced-motion:no-preference){
+    .btn{transition:border-color .15s, filter .15s}
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <!-- INÍCIO -->
+  <section class="view active" id="inicio" aria-label="Início">
+    <div class="profile">
+      <div class="mark" id="mark">SN</div>
+      <h1 id="nome">AetherMatterLab</h1>
+      <p class="tag">Cursos, impressão 3D e branding</p>
+    </div>
+    <div class="stack">
+      <a class="btn" id="lnk-insta" target="_blank" rel="noopener">
+        <span>Instagram<small>Trabalhos e bastidores</small></span><span aria-hidden="true">↗</span>
+      </a>
+      <a class="btn" href="#servicos">
+        <span>Serviços<small>O que eu faço e como contratar</small></span><span aria-hidden="true">›</span>
+      </a>
+      <a class="btn primary" data-wa data-cat="Link da bio" target="_blank" rel="noopener">
+        <span>Chamar no WhatsApp<small>Resposta direta, sem formulário</small></span><span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="view" id="servicos" aria-label="Serviços">
+    <a class="back" href="#inicio">‹ Voltar</a>
+    <h2>Serviços</h2>
+    <p class="lead">Escolha o assunto e já chame no WhatsApp com a mensagem pronta.</p>
+
+    <article class="service" id="curso">
+      <h3>Cursos</h3>
+      <p>Aulas práticas para quem quer aprender fazendo. Descreva aqui o tema, o formato (online ou presencial) e para quem é.</p>
+      <ul>
+        <li>Turmas e aulas individuais</li>
+        <li>Material de apoio incluso</li>
+        <li>Certificado de conclusão</li>
+      </ul>
+      <a class="btn primary" data-wa data-cat="Cursos" target="_blank" rel="noopener">Quero saber sobre os cursos</a>
+    </article>
+
+    <article class="service" id="impressao-3d">
+      <h3>Impressão 3D</h3>
+      <p>Peças sob medida, protótipos e pequenas séries. Envie o arquivo ou a ideia e eu oriento material, prazo e valor.</p>
+      <ul>
+        <li>Protótipos e peças funcionais</li>
+        <li>Modelagem a partir de desenho ou medidas</li>
+        <li>Acabamento e pintura</li>
+      </ul>
+      <a class="btn primary" data-wa data-cat="Impressão 3D" target="_blank" rel="noopener">Pedir orçamento de impressão</a>
+    </article>
+
+    <article class="service" id="branding">
+      <h3>Branding</h3>
+      <p>Identidade visual completa para o seu negócio: marca, cores, tipografia e aplicações.</p>
+      <ul>
+        <li>Logotipo e manual de marca</li>
+        <li>Materiais para redes sociais</li>
+        <li>Embalagens e papelaria</li>
+      </ul>
+      <a class="btn primary" data-wa data-cat="Branding" target="_blank" rel="noopener">Falar sobre minha marca</a>
+    </article>
+
+    <a class="btn" data-wa data-cat="Outro assunto" target="_blank" rel="noopener">
+      <span>Outro assunto<small>Conte o que você precisa</small></span><span aria-hidden="true">↗</span>
+    </a>
+  </section>
+
+  <footer id="rodape"></footer>
+</main>
+
+<script>
+  // ====== EDITE AQUI ======
+  const CONFIG = {
+    nome: "AetherMatterLab",
+    whatsapp: "5519996233385",   // país + DDD + número, só dígitos
+    instagram: "aethermatterlab",     // sem o @
+    mensagem: (cat) => `Olá! Vim pela página de *${cat}* e gostaria de saber mais.`
+  };
+  // ========================
+
+  const $ = (s, r=document) => r.querySelector(s);
+  const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+
+  // Nome e iniciais
+  $("#nome").textContent = CONFIG.nome;
+  $("#mark").textContent = CONFIG.nome.split(/\s+/).map(p => p[0]).slice(0,2).join("").toUpperCase();
+  $("#rodape").textContent = "© " + new Date().getFullYear() + " " + CONFIG.nome;
+  document.title = CONFIG.nome + " | Links e serviços";
+
+  // Instagram
+  $("#lnk-insta").href = "https://instagram.com/" + CONFIG.instagram;
+
+  // Botões do WhatsApp com a categoria
+  function waLink(cat){
+    return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(CONFIG.mensagem(cat));
+  }
+  $$("[data-wa]").forEach(a => { a.href = waLink(a.dataset.cat); });
+
+  // Navegação simples por hash (#inicio, #servicos, #curso, #impressao-3d, #branding)
+  function route(){
+    const id = (location.hash || "#inicio").slice(1);
+    const target = document.getElementById(id);
+    const view = target ? (target.classList.contains("view") ? target : target.closest(".view")) : null;
+    $$(".view").forEach(v => v.classList.toggle("active", v === (view || $("#inicio"))));
+    if (target && !target.classList.contains("view")) target.scrollIntoView();
+    else window.scrollTo(0,0);
+  }
+  addEventListener("hashchange", route);
+  route();
+</script>
+</body>
+</html>
