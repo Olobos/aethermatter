@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seu Nome | Links e serviços</title>
+<meta name="description" content="Cursos, impressão 3D e branding. Fale comigo pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#E9ECE4; --ink:#1B2A2F; --muted:#4F5F63; --card:#F7F8F4;
+    --line:#C9CFC3; --accent:#2F5BFF; --accent-ink:#fff; --filament:#F2B705;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#131B1E; --ink:#E9ECE4; --muted:#9AA9AC; --card:#1C272B; --line:#2E3C41; --accent:#6C8BFF; --accent-ink:#0E1620; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; min-height:100vh; background:var(--bg); color:var(--ink);
+    font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.5; padding:32px 20px 48px;
+  }
+  main{max-width:480px; margin:0 auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+
+  .profile{text-align:center; margin-bottom:28px}
+  .mark{
+    width:84px; height:84px; margin:0 auto 14px; border-radius:50%;
+    background:var(--ink); color:var(--bg); display:grid; place-items:center;
+    font-weight:800; font-size:34px; letter-spacing:-1px;
+    box-shadow:6px 6px 0 var(--filament);
